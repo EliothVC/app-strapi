@@ -471,6 +471,7 @@ export interface ApiContactoContacto extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    descripcion: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -478,6 +479,39 @@ export interface ApiContactoContacto extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    titulo: Schema.Attribute.String;
+    titulo2: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFormularioFormulario extends Struct.CollectionTypeSchema {
+  collectionName: 'formularios';
+  info: {
+    displayName: 'formulario';
+    pluralName: 'formularios';
+    singularName: 'formulario';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    label: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::formulario.formulario'
+    > &
+      Schema.Attribute.Private;
+    placeholder: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    requerido: Schema.Attribute.Boolean;
+    titulo: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1150,6 +1184,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::acerca-de.acerca-de': ApiAcercaDeAcercaDe;
       'api::contacto.contacto': ApiContactoContacto;
+      'api::formulario.formulario': ApiFormularioFormulario;
       'api::home.home': ApiHomeHome;
       'api::navmenu.navmenu': ApiNavmenuNavmenu;
       'api::noticia.noticia': ApiNoticiaNoticia;
