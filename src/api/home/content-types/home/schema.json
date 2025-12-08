@@ -31,10 +31,20 @@
     "titulo2": {
       "type": "string"
     },
-    "titulo3": {
-      "type": "string"
+    "imagen2": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "descripcion2": {
+      "type": "text"
+    },
+    "titulo3": {
       "type": "string"
     },
     "titulo4": {
