@@ -27,6 +27,9 @@
         "audios"
       ]
     },
+    "titulo2": {
+      "type": "string"
+    },
     "descripcion2": {
       "type": "text"
     },
@@ -40,7 +43,7 @@
         "audios"
       ]
     },
-    "titulo2": {
+    "titulo3": {
       "type": "string"
     },
     "descripcion3": {

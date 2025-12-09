@@ -460,6 +460,7 @@ export interface ApiAcercaDeAcercaDe extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     titulo: Schema.Attribute.String;
     titulo2: Schema.Attribute.String;
+    titulo3: Schema.Attribute.String;
     titulo4: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
