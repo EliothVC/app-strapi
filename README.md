@@ -41,7 +41,8 @@ El proyecto correrá en ``http://localhost:1337`` que esta Hosteada en Render ``
 
 Credenciales de Acceso:
 
-admin@admin
+admin@admin.com
+contraseña: Admin1234
 
 ## Integrantes y Contribuciones
 
